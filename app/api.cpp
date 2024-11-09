@@ -41,7 +41,7 @@ int main()
 
     crow::SimpleApp app;
 
-    //roof route
+    //root route
     CROW_ROUTE(app, "/")
     ([]()
     {
