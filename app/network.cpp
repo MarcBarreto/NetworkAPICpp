@@ -7,7 +7,7 @@ using namespace Eigen;
 using namespace std;
 
 // MatrixXd is a data type of Eigen library to lead with matrix and array. 
-MatrixXd sigmoid(const MatrixXd &z)
+MatrixXd sigmoid(const MatrixXd &Z)
 {
     return 1.0 / (1.0 + (-Z.array()).exp());
 }
@@ -23,7 +23,7 @@ void save_model(const MatrixXd &weights1, const MatrixXd &weights2, const string
 
     if (!file)
     {
-        cerr << "Error to open file to salve model."
+        cerr << "Error to open file to salve model.";
         return;
     }
 
