@@ -13,7 +13,7 @@ def index():
     prediction = None
     error = None
 
-    if request.methods == 'POST':
+    if request.method == 'POST':
         feature1 = request.form.get('feature1', type = float)
         feature2 = request.form.get('feature2', type = float)
     
@@ -24,7 +24,7 @@ def index():
 
         try:
             # requests to Api
-            response = requests.post(API_URL, data = json.dump(data), headers= {'Content-Type': 'application/json'})
+            response = requests.post(API_URL, data = json.dumps(data), headers= {'Content-Type': 'application/json'})
 
             if response.status_code == 200:
                 result = response.json()

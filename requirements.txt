@@ -1,0 +1,5 @@
+watchdog==5.0.3
+werkzeug==3.0.3
+flask==3.0.3
+urllib3==1.26.16
+requests==2.31.0
